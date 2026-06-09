@@ -23,3 +23,11 @@
 
 Шаблоны: `skills/privacy-docs-filler/templates/`
 Скрипты: `skills/privacy-docs-filler/scripts/fill_docs.py`, `style_html.py`
+
+---
+
+## Общие скиллы (доступны всем отделам)
+
+| Скилл | Как вызвать | Что делает |
+|-------|-------------|------------|
+| `yandex-tracker-issue-creator` | `/yandex-tracker-issue-creator` | Создаёт задачи в Yandex Tracker в диалоговом режиме |

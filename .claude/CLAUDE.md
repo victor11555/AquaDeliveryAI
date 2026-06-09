@@ -11,13 +11,15 @@ AquaDeliveryAI/
 ├── .claude/
 │   ├── skills/          ← копии скиллов для вызова через /skill-name
 │   └── settings.json
+├── shared/              ← общие скиллы (доступны всем отделам)
 ├── support/             ← техподдержка партнёров
 ├── product/             ← продуктовый отдел
 ├── 1c-implementation/   ← внедрение 1С УНФ
+├── hh.ru/               ← рекрутинг (поиск кандидатов через hh.ru API)
 ├── marketing/           ← маркетинг (скиллов пока нет)
 ├── sales/               ← продажи (скиллов пока нет)
 ├── accounting/          ← бухгалтерия (скиллов пока нет)
-├── testing/             ← тестирование (скиллов пока нет)
+├── testing/             ← тестирование и релизные заметки
 ├── CLAUDE.md            ← этот файл
 ├── MEMORY.md            ← индекс памяти проекта
 ├── project_skill_structure.md
@@ -30,10 +32,13 @@ AquaDeliveryAI/
 
 | Отдел | Скиллы |
 |-------|--------|
-| support | instruction-sync, partner-dialog-analyzer, yandex-tracker-issue-creator |
+| **shared** | yandex-tracker-issue-creator ← доступен всем отделам |
+| support | instruction-sync, partner-dialog-analyzer, partner-reply, partner-appeals-analyzer |
 | product | privacy-docs-filler |
-| 1c-implementation | aqua-implementation |
-| marketing, sales, accounting, testing | пока пусто |
+| 1c-implementation | aqua-implementation, voronka-vnedreniya-tracker + агенты initial-setup |
+| hh.ru | логика в CLAUDE.md отдела (hh.ru API) |
+| testing | create-pre-relis-note |
+| marketing, sales, accounting | пока пусто |
 
 ---
 
@@ -81,6 +86,7 @@ AquaDeliveryAI/
 
 ## Чеклист при добавлении нового скилла
 
+**Скилл конкретного отдела:**
 1. Создать папку `<отдел>/skills/<skill-name>/`
 2. Положить `<skill-name>.md` (основной файл скилла)
 3. Создать `README.md` рядом со скиллом
@@ -88,6 +94,14 @@ AquaDeliveryAI/
 5. Обновить `<отдел>/CLAUDE.md` — добавить скилл в таблицу скиллов
 6. Скопировать `<skill-name>.md` в `.claude/skills/`
 7. Закоммитить и запушить
+
+**Общий скилл (для всех отделов):**
+1. Создать папку `shared/skills/<skill-name>/`
+2. Положить `<skill-name>.md` и `README.md`
+3. Обновить `shared/README.md` и `shared/CLAUDE.md`
+4. Скопировать `<skill-name>.md` в `.claude/skills/`
+5. Добавить строку в раздел «Общие скиллы» каждого отдела в его `CLAUDE.md`
+6. Закоммитить и запушить
 
 ---
 

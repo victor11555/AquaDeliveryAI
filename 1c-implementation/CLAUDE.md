@@ -4,9 +4,16 @@
 
 ---
 
-## Направление 1. Аудит партнёра → план внедрения
+## Направление 1. Аудит партнёра → план + задачи в трекере
 
-**Скилл:** `/aqua-implementation`
+Два скилла, которые работают последовательно:
+
+| Скилл | Как вызвать | Что делает |
+|-------|-------------|------------|
+| `aqua-implementation` | `/aqua-implementation` | Транскрибация встречи → Excel-план + `data.json` |
+| `voronka-vnedreniya-tracker` | `/voronka-vnedreniya-tracker` | `data.json` → 40+ задач в Yandex Tracker |
+
+**Скилл `aqua-implementation`:** `/aqua-implementation`
 
 **Триггер:** пользователь кидает транскрибацию встречи с партнёром, просит «составь план», «заполни по транскрибации», «оформи итоги аудита».
 
@@ -216,6 +223,9 @@ Snapshot делать только когда нужен ref для клика. 
     │   │   └── plan_template_existing.json ← шаблон для действующего
     │   └── scripts/
     │       └── build_excel.py
+    ├── voronka-vnedreniya-tracker/
+    │   ├── voronka-vnedreniya-tracker.md
+    │   └── README.md
     └── initial-setup/
         ├── orchestrator/orchestrator.md
         ├── setup-internet-shop/setup-internet-shop.md
