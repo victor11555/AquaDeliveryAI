@@ -1,0 +1,4 @@
+export HH_TOKEN=""
+export HH_REFRESH_TOKEN=""
+export HH_CLIENT_ID=""
+export HH_CLIENT_SECRET=""
