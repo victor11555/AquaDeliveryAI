@@ -36,5 +36,6 @@
         ├── disable-1c-background-jobs/disable-1c-background-jobs.md
         ├── 1c-history-settings/1c-history-settings.md
         ├── setup-kafka-exchange/setup-kafka-exchange.md
+        ├── setup-1c-user/setup-1c-user.md
         └── agent-builder/agent-builder.md
 ```
